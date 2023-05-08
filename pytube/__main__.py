@@ -240,7 +240,7 @@ class YouTube:
         """
         if self._vid_info:
             return self._vid_info
-
+        self.bypass_age_gate()
         innertube = InnerTube(use_oauth=self.use_oauth, allow_cache=self.allow_oauth_cache)
 
         innertube_response = innertube.player(self.video_id)
